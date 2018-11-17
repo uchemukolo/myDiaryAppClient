@@ -6,21 +6,21 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const APP_DIR = path.resolve(__dirname, '../src');
+const APP_DIR = path.resolve(__dirname, '../src/index.jsx');
 module.exports = (env) => {
-  const { PLATFORM, VERSION } = env;
+  const { PLATFORM } = env;
   return merge([
     {
       entry: ['@babel/polyfill', APP_DIR],
       module: {
         rules: [
           {
-            test: /\.js$/,
+            test: /\.(js|jsx)$/,
             exclude: /node_modules/,
             use: ['eslint-loader'],
           },
           {
-            test: /\.js$/,
+            test: /\.(js|jsx)$/,
             exclude: /node_modules/,
             use: {
               loader: 'babel-loader',
@@ -29,7 +29,8 @@ module.exports = (env) => {
           {
             test: /\.scss$/,
             use: [
-              PLATFORM === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
+              PLATFORM === 'production'
+                ? MiniCssExtractPlugin.loader : 'style-loader',
               'css-loader',
               'sass-loader',
             ],

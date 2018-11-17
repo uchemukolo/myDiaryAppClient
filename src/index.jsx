@@ -5,6 +5,7 @@ import store from './store';
 import './myStyle.scss';
 
 const App = () => (
+
   <div className="background">
     <div className="topnav" id="myTopnav">
       <h1 className="active">
@@ -20,6 +21,7 @@ const App = () => (
 
 ReactDOM.render(
   <Provider store={store}>
-  <App />
+    <App />
   </Provider>,
-  document.getElementById('app'));
+  document.getElementById('app')
+);
