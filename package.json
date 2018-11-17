@@ -6,9 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --config config/webpack.base.config.js --open --hot --history-api-fallback --env.PLATFORM=local --env.VERSION=stag",
     "prebuild": "webpack --mode production --config config/webpack.prod.config.js --env.PLATFORM=production --env.VERSION=stag --progress",
-    "build": "node server",
     "lint": "node_modules/.bin/eslint src/ --fix",
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
   "repository": {
@@ -22,7 +21,6 @@
     "url": "https://github.com/uchemukolo/myDiaryAppClient/issues"
   },
   "homepage": "https://github.com/uchemukolo/myDiaryAppClient#readme",
-
   "dependencies": {
     "@babel/core": "^7.1.6",
     "babel-core": "^7.0.0-bridge.0",
