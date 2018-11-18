@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - "8.11.4"
+addons:
+  chrome: stable
+cache:
+  directories:
+    - node_modules
+script:
+  # - npm run build
+  - npm run start &
+  - sleep 15
+  - npm test
+env:
+  global:
+    - CC_TEST_REPORTER_ID=fd12675e464502869d36cd81cff1a79651b3a47f3d014ce1cbf591a52e7cbc77
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
