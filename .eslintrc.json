@@ -1,4 +1,16 @@
 {
+    "root": true,
+    "env": {
+        "es6": true,
+        "node": true,
+        "browser": true,
+        "commonjs": true,
+        "jest": true
+      },
+      "parser": "babel-eslint",
+      "parserOptions": {
+        "sourceType": "module"
+      },
     "extends": "airbnb",
     "rules": {
         "semi": ["error", "always"],
@@ -12,8 +24,15 @@
         "no-case-declarations": 0,
         "comma-dangle": 0,
         "curly": ["error", "multi-line"],
-        "import/no-unresolved": [
-          2
-        ]
-    }
+        "import/no-unresolved": [2, { "commonjs": true }],
+        "no-shadow": ["error", { "allow": ["req", "res", "err"] }]
+    },
+    "overrides": [
+        {
+          "files": "*.test.js",
+          "rules": {
+            "no-unused-expressions": "off"
+          }
+        }
+      ]
 }
