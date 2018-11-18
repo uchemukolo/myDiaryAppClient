@@ -22,9 +22,12 @@
         "no-param-reassign": 0,
         "no-useless-escape": 0,
         "no-case-declarations": 0,
+        "react/no-unescaped-entities": 0,
+        "react/jsx-filename-extension": true,
         "comma-dangle": 0,
         "curly": ["error", "multi-line"],
         "import/no-unresolved": [2, { "commonjs": true }],
+        "import/extensions":[1, {"js": "never", "jsx": "never"}],
         "no-shadow": ["error", { "allow": ["req", "res", "err"] }]
     },
     "overrides": [
