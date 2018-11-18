@@ -65,4 +65,3 @@ The full API documentation can be Viewed [Here](https://mydiarychallenge.docs.ap
 
 # Author
 Uche Mukolo
-
