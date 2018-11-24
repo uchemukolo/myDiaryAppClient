@@ -6,7 +6,7 @@ export default () => (
     <Link to="/" className="active">
     MY DIARY
     </Link>
-    <Link to="public/signup.html">Signup</Link>
-    <Link to="public/signin.html">Login</Link>
+    <Link to="/signup">Signup</Link>
+    <Link to="/signin">Login</Link>
   </div>
 );

@@ -164,7 +164,7 @@ border: 2px solid #f1f1f1;
   border: 2px solid #f1f1f1;
   background-color: #fafafa;
   padding-bottom: 20px;
-  margin: 30px auto;
+  margin: 100px auto;
   text-align: center;
   width: 42vw;
 }
@@ -416,10 +416,11 @@ input[type=submit] {
   background-color: #38a7b6;
   border: none;
   border-radius: 5px;
-  color: #000000;
+  color: #fdfafa;
   cursor: pointer;
   margin: 5px auto;
   padding: 12px 20px;
+  width: 85%;
 }
 
 input[type=submit]:hover {
@@ -533,7 +534,29 @@ margin-top: 10PX;
   background-color: #000000;
   background-color: #00000066;
 }
+.loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #3498db;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
 
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+.loading-bg {
+  color: #5f6368;
+  background: rgb(255, 255, 255);
+}
+
+.loading-bg > p {
+  font-size: 1.5rem;
+}
 /* Modal Content */
 .modal-content {
   margin: auto;
@@ -731,7 +754,7 @@ margin-top: 10PX;
   text-decoration: none;
 }
 
-#pwords {
+#cpword {
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #ffffff;
