@@ -5,12 +5,14 @@ import { SignupForm } from './SignupForm';
 import { userSignupRequest } from '../../redux/actions/users/signup';
 
 const SignupPage = ({ userSignupRequestAction, error, redirect }) => (
-  <div className="container-signup">
-    <SignupForm
-      userSignupRequest={userSignupRequestAction}
-      error={error}
-      redirect={redirect}
-    />
+  <div>
+    <div className="container-signup">
+      <SignupForm
+        userSignupRequest={userSignupRequestAction}
+        error={error}
+        redirect={redirect}
+      />
+    </div>
   </div>
 );
 

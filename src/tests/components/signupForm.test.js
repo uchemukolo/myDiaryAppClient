@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { SignupForm } from '../../components/signup/SignupForm';
-import '../setupTests';
 
 
 jest.mock('react-router-dom');

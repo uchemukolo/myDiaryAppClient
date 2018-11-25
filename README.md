@@ -52,11 +52,9 @@ You can also access [myDiaryApp](https://mydiary-challenge.herokuapp.com) api on
 - [Javascript-ES6](https://en.wikipedia.org/wiki/ECMAScript) The 6th edition of EcmaScript, officially known as ECMAScript 2015, was finalized in June 2015. This update adds significant new syntax for writing complex applications, including classes and modules, but defines them semantically in the same terms as ECMAScript 5 strict mode
 - [Babel](https://babeljs.io/) used for transpiling codes from ES6 to ES5
 - [Jest](https://mochajs.org/) used for setting up tests
-- [PostgreSQL](https://www.postgresql.org/) used for setting up relational database
-- [Vanilla Js](https://developer.mozilla.org/en-US/docs/Web/JavaScript) for frontend design
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) for frontend design
 - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) for styling frontend
-- [FETCH API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) for making Ajax call from the client to the API
+- [AXIOS](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) for making Ajax call from the client to the API
 
 The full API documentation can be Viewed [Here](https://mydiarychallenge.docs.apiary.io/)
 
