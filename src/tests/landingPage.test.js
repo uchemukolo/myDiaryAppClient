@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import HomePage from '../components/home/HomePage';
-import '../setupTests';
+// import '../setupTests';
 
 jest.mock('react-router-dom');
 

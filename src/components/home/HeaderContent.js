@@ -14,7 +14,7 @@ export default () => (
     </div>
     <div className="main-signup-button">
       <button type="button" className="button">
-        <Link to="public/signup.html">
+        <Link to="/signup">
           <span>Register! Its Free </span>
         </Link>
       </button>
