@@ -1,14 +1,24 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import NavigationBar from './home/NavigationBar';
+import Footer from './home/Footer';
 import HomePage from './home/HomePage';
 import SignupPage from './signup/SignupPage';
+import LoginPage from './login/LoginPage';
 
 const Routes = () => (
-  <Switch>
-    <Route exact path="/" component={HomePage} />
-    <Route exact path="/signup" component={SignupPage} />
-  </Switch>
+  <BrowserRouter>
+    <div id="wrap">
+      <NavigationBar />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/signup" component={SignupPage} />
+        <Route exact path="/signin" component={LoginPage} />
+      </Switch>
+      <Footer />
+    </div>
+  </BrowserRouter>
 );
 
 // Routes.PropTypes = {

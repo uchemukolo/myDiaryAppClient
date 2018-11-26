@@ -31,7 +31,11 @@ export class SignupForm extends React.Component {
       username, email, password, confirmPassword
     } = this.state;
 
-    if (errors.username || errors.email || errors.password || errors.confirmPassword) {
+    if (
+      errors.username
+      || errors.email
+      || errors.password
+      || errors.confirmPassword) {
       this.setState(() => ({
         errors
       }));
@@ -58,7 +62,7 @@ export class SignupForm extends React.Component {
     } = this.state;
     const { redirect } = this.props;
     if (redirect) {
-      return <Redirect to="/myprofile" />;
+      return <Redirect to="/profile" />;
     }
     return (
       <form id="register-form" onSubmit={this.onSubmit}>
@@ -77,7 +81,6 @@ export class SignupForm extends React.Component {
               value={username}
               onChange={this.onChange}
               type="text"
-              error={errors.username}
               id="username"
               name="username"
               placeholder="Username"
