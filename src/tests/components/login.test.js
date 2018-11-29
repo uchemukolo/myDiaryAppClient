@@ -54,7 +54,7 @@ describe('LoginForm component', () => {
       wrapper.instance().onSubmit(event);
       expect(wrapper.state().errors).toEqual(
         {
-          password: 'Your password must not be lass than 8 characters'
+          password: 'Your password must not be less than 8 characters'
         }
       );
     });
