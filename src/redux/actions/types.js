@@ -5,3 +5,7 @@ export const SET_CURRENT_USER = 'SET_CURRENT_USER';
 export const SET_CURRENT_USER_ERROR = 'SET_CURRENT_USER_ERROR';
 export const SET_USER_TOKEN = 'SET_USER_TOKEN';
 export const LOGOUT_USER = 'LOGOUT_USER';
+
+// entry action types
+export const ADD_NEW_ENTRY = 'ADD_NEW_ENTRY';
+export const ADD_NEW_ENTRY_ERROR = 'ADD_NEW_ENTRY_ERROR';

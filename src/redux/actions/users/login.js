@@ -1,5 +1,9 @@
 import axios from 'axios';
-import { SET_CURRENT_USER, SET_CURRENT_USER_ERROR, LOGOUT_USER } from '../types';
+import {
+  SET_CURRENT_USER,
+  SET_CURRENT_USER_ERROR,
+  LOGOUT_USER
+} from '../types';
 import setAuthToken from '../../utils/setAuthToken';
 
 

@@ -12,7 +12,7 @@ const validateInput = (data) => {
   if (Validator.isEmpty(data.password)) {
     errors.password = errorMsg;
   } else if (data.password.length < 8) {
-    errors.password = 'Your password must not be lass than 8 characters';
+    errors.password = 'Your password must not be less than 8 characters';
   }
 
   return {

@@ -52,7 +52,7 @@ export class LoginForm extends React.Component {
     } = this.state;
     const { redirect } = this.props;
     if (redirect) {
-      return <Redirect to="/profile" />;
+      return <Redirect to="/" />;
     }
     return (
       <form id="signin-form" onSubmit={this.onSubmit}>

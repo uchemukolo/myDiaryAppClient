@@ -138,6 +138,7 @@ html{overflow-x:hidden}
   padding: 0px auto;
   width: 70%;
 
+
 }
 .container-entry-detail {
 border: 2px solid #f1f1f1;
@@ -265,10 +266,17 @@ border: 2px solid #f1f1f1;
   padding: 10px 10px 20px 10px;
 }
 .col-75 {
-  float: left;
-  width: 70%;
-  padding: 10px 10px 20px 10px;
+  width: 100%;
+  padding: 10px 30px 20px 30px;
 
+}
+.position {
+  display: flex;
+  flex-direction: column;
+}
+
+.add {
+  padding: 10px auto;
 }
 
 #entry {
@@ -278,7 +286,6 @@ border: 2px solid #f1f1f1;
   margin: 5px auto;
   padding: 10px 20px 20px 10px;
   resize: vertical;
-  width: 70%;
 }
 #email {
   border: 1px solid #ccc;
@@ -601,7 +608,6 @@ margin-top: 10PX;
   margin: 5px auto;
   padding: 10px 20px;
   resize: vertical;
-  width: 50%;
 }
 .myEditBtn {
   background-color: #38a7b6;
@@ -837,7 +843,6 @@ margin-top: 10PX;
   margin: 5px auto;
   padding: 10px 20px;
   resize: vertical;
-  width: 50%;
 }
 table {
   display: block;
