@@ -10,7 +10,7 @@ export class LoginForm extends React.Component {
       email: '',
       password: '',
       errors: {},
-      loading: false,
+      isLoading: false,
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);

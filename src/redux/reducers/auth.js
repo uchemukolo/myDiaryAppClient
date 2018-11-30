@@ -10,7 +10,9 @@ const initialState = {
   isAuthenticated: false,
   user: {},
   error: {},
-  redirect: false
+  redirect: false,
+  isLoading: false,
+  entry: {}
 };
 
 export default (state = initialState, action = {}) => {
@@ -21,6 +23,7 @@ export default (state = initialState, action = {}) => {
         isAuthenticated: true,
         redirect: true,
         user: action.user,
+        isLoading: true
       };
     case SIGNUP_USER_ERROR:
       return {
@@ -34,6 +37,7 @@ export default (state = initialState, action = {}) => {
         isAuthenticated: true,
         redirect: true,
         user: action.user,
+        isLoading: true
       };
     case SET_CURRENT_USER_ERROR:
       return {

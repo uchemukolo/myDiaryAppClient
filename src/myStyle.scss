@@ -8,14 +8,14 @@ html{overflow-x:hidden}
 .card-header {
   display: block;
   color: #000000;
-  border: 2px solid #ccc;
+  border: 1px solid rgb(46, 160, 175);
   background-color: #fafafa;
-  border-radius: 5px;
-  margin: 10px auto;
+  border-radius: 15px;
+  margin: 15px auto;
   padding-left: 15px;
   padding-right: 15px;
   text-decoration: none;
-  width: 30%;
+  width: 28%;
 }
 .card-header a:hover {
   background-color: #ddd;
@@ -393,7 +393,6 @@ p {
  font-size:14px;
 }
 a:hover {
-  color:#38a7b6;
   cursor: pointer;
 }
 
@@ -452,6 +451,7 @@ display: inline-block;
   background-repeat: no-repeat;
 
   background-image: url("./static/images/pexels-photo-845434.jpeg");
+  background-position: center;
   color: #000000;
   height: 50vh;
   float: left;
@@ -547,8 +547,16 @@ margin-top: 10PX;
   border-top: 5px solid #3498db;
   width: 40px;
   height: 40px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
+  position: absolute;
+  top: 20%;
+  right: 50%;
+  -webkit-animation: spin 10s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* Safari */
@@ -556,6 +564,7 @@ margin-top: 10PX;
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
 }
+
 .loading-bg {
   color: #5f6368;
   background: rgb(255, 255, 255);
@@ -819,6 +828,12 @@ margin-top: 10PX;
 }
 .red-text {
   color: #ff0000;
+  text-align: center;
+  background-color: #f1f1f1;
+
+}
+.red-text-entry {
+    color: #ff0000;
   text-align: center;
   background-color: #f1f1f1;
 

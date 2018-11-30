@@ -19,6 +19,7 @@ export const loginUserFailure = error => ({
 
 export const logout = () => (dispatch) => {
   localStorage.removeItem('jwtToken');
+  console.log(window.localStorage);
   dispatch({
     type: LOGOUT_USER
   });
@@ -34,5 +35,5 @@ export const userLoginRequest = userDetails => dispatch => axios.post(
     setAuthToken(token);
     dispatch(loginUser(response.data));
   }, (error) => {
-    dispatch(loginUserFailure(error.response.data));
+    dispatch(loginUserFailure(error.response));
   });

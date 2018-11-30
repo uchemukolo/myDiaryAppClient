@@ -17,5 +17,5 @@ export const addEntryAction = newEntry => dispatch => axios.post(
   .then((response) => {
     dispatch(addEntrySuccess(response.data));
   }, (error) => {
-    dispatch(addEntryFailure(error.response));
+    dispatch(addEntryFailure(error.response.data));
   });

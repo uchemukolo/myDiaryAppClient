@@ -24,5 +24,5 @@ export const userSignupRequest = userData => dispatch => axios.post(
     setAuthToken(token);
     dispatch(signupUser(response.data));
   }, (error) => {
-    dispatch(signupUserFailure(error.response.data));
+    dispatch(signupUserFailure(error.response));
   });

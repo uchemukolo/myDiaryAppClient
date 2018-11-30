@@ -9,3 +9,5 @@ export const LOGOUT_USER = 'LOGOUT_USER';
 // entry action types
 export const ADD_NEW_ENTRY = 'ADD_NEW_ENTRY';
 export const ADD_NEW_ENTRY_ERROR = 'ADD_NEW_ENTRY_ERROR';
+export const GET_ENTRIES = 'GET_ENTRIES';
+export const GET_ENTRIES_ERROR = 'GET_ENTRIES_ERROR';
