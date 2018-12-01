@@ -2,7 +2,8 @@ import axios from 'axios';
 import
 {
   GET_ENTRIES,
-  GET_ENTRIES_ERROR
+  GET_ENTRIES_ERROR,
+  IS_LOADING
 } from '../types';
 
 const token = localStorage.getItem('jwtToken');
@@ -17,7 +18,12 @@ export const getAllEntriesFailure = payload => ({
   payload
 });
 
+export const Loading = () => ({
+  type: IS_LOADING
+});
+
 export const getEntries = () => (dispatch) => {
+  dispatch(Loading());
   axios.get(
     'https://mydiary-challenge.herokuapp.com/api/v1/entries', {
       headers: {

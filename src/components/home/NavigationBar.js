@@ -26,7 +26,7 @@ class NavigationBar extends React.Component {
                 <Link to="profile">Home</Link>
                 <Link to="/entries">My Entries</Link>
                 <Link to="/add-entry">Add New Entry</Link>
-                <Link onClick={handleLogout} to="/logout">Logout</Link>
+                <Link onClick={handleLogout} to="/">Logout</Link>
               </div>
             )
             : (

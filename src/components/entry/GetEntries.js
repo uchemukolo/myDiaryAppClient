@@ -11,16 +11,30 @@ class GetEntries extends Component {
   }
 
   render() {
-    const { entry: fetchedEntry, isLoading } = this.props;
-    console.log(isLoading);
+    const { entry: { entry }, isLoading } = this.props;
+
+    const noEntries = (
+      <div style={{ textAlign: 'center', padding: '5%' }}>
+        <h5>No Entries Yet, click on Add New Entry to add your First Entry</h5>
+      </div>
+    );
+
+    if (isLoading) {
+      return (
+        <p className="loader" />
+      );
+    }
+
+    if (!isLoading && (!entry || !entry.length)) {
+      return noEntries;
+    }
+
     return (
       <div>
         <div id="output" className="container-entries">
-          {!fetchedEntry.entry
-            ? <p className="red-text">No Entries Yet, click on Add New Entry to add your First Entry</p>
-            : fetchedEntry.entry && fetchedEntry.entry.map(data => (
-              <EntryCard key={data.id} {...data} />
-            ))}
+          {entry.map(data => (
+            <EntryCard key={data.id} {...data} />
+          ))}
         </div>
       </div>
     );
