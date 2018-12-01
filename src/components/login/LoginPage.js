@@ -4,8 +4,12 @@ import PropTypes from 'prop-types';
 import { LoginForm } from './LoginForm';
 import { userLoginRequest } from '../../redux/actions/users/login';
 
-const LoginPage = ({ userLoginRequestAction, error, redirect }) => (
+const LoginPage = ({
+  userLoginRequestAction, error, redirect, isLoading
+}) => (
   <div>
+    { isLoading
+     && <div className="loader" /> }
     <div className="container_signin">
       <LoginForm
         userLoginRequest={userLoginRequestAction}
@@ -15,16 +19,17 @@ const LoginPage = ({ userLoginRequestAction, error, redirect }) => (
     </div>
   </div>
 );
-
 LoginPage.propTypes = {
   userLoginRequestAction: PropTypes.func.isRequired,
   error: PropTypes.shape({}).isRequired,
-  redirect: PropTypes.bool.isRequired
+  redirect: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = state => ({
   error: state.auth.error,
-  redirect: state.auth.redirect
+  redirect: state.auth.redirect,
+  isLoading: state.auth.isLoading
 });
 
 const mapDispatchToProps = dispatch => ({

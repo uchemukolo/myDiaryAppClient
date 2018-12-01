@@ -8,7 +8,7 @@ import App from './App';
 import setAuthToken from './redux/utils/setAuthToken';
 import { loginUser } from './redux/actions/users/login';
 
-if (window.localStorage.jwtToken) {
+if (window.localStorage.jwtToken && typeof window !== 'undefined') {
   setAuthToken(window.localStorage.jwtToken);
   store.dispatch(loginUser(jwt.decode(window.localStorage.jwtToken)));
 }

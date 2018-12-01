@@ -17,7 +17,9 @@ describe('Auth Reducer', () => {
     const newState = auth(initialState, action);
     expect(newState).toEqual({
       ...initialState,
-      ...{ user, isAuthenticated: true, redirect: true }
+      ...{
+        user, isAuthenticated: true, redirect: true, isLoading: true
+      }
     });
   });
   it('it should not signup a user', () => {
@@ -47,6 +49,7 @@ describe('Login Reducer', () => {
     expect(newState).toEqual({
       ...initialState,
       isAuthenticated: true,
+      isLoading: true,
       redirect: true,
       user: {
         email: 'muche@mail.com',
@@ -77,9 +80,11 @@ describe('Login Reducer', () => {
     expect(newState).toEqual({
       ...initialState,
       ...{ isAuthenticated: false },
+      isLoading: false,
       redirect: false,
       user: {},
       error: {},
+      entry: {},
     });
   });
 });

@@ -1,3 +1,5 @@
+/* eslint-disable react/forbid-prop-types */
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -9,7 +11,6 @@ class NavigationBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // redirect: false
     };
   }
 
@@ -41,7 +42,7 @@ class NavigationBar extends React.Component {
 }
 NavigationBar.propTypes = {
   logout: PropTypes.func.isRequired,
-  auth: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => ({
