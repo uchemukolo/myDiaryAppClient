@@ -19,7 +19,6 @@ export const loginUserFailure = error => ({
 
 export const logout = () => (dispatch) => {
   localStorage.removeItem('jwtToken');
-  console.log(window.localStorage);
   dispatch({
     type: LOGOUT_USER
   });

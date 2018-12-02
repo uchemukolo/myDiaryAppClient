@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavigationBar from './home/NavigationBar';
 import Footer from './home/Footer';
@@ -8,6 +7,7 @@ import SignupPage from './signup/SignupPage';
 import LoginPage from './login/LoginPage';
 import AddEntryForm from './entry/AddEntryForm';
 import GetEntries from './entry/GetEntries';
+import EntryDetail from './entry/EntryDetail';
 
 const Routes = () => (
   <BrowserRouter>
@@ -19,6 +19,7 @@ const Routes = () => (
         <Route exact path="/signup" component={SignupPage} />
         <Route exact path="/signin" component={LoginPage} />
         <Route exact path="/add-entry" component={AddEntryForm} />
+        <Route exact path="/entry-detail" component={EntryDetail} />
       </Switch>
       <Footer />
     </div>
