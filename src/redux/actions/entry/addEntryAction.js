@@ -11,11 +11,13 @@ export const addEntryFailure = payload => ({
   payload
 });
 
-export const addEntryAction = newEntry => dispatch => axios.post(
+export const addEntryAction = (newEntry, history) => dispatch => axios.post(
   'https://mydiary-challenge.herokuapp.com/api/v1/entries', newEntry
 )
   .then((response) => {
     dispatch(addEntrySuccess(response.data));
+    const entryId = response.data.newEntry.id;
+    history.replace(`/entry-detail/${entryId}`);
   }, (error) => {
     dispatch(addEntryFailure(error.response.data));
   });

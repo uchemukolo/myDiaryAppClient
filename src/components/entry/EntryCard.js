@@ -15,7 +15,7 @@ const EntryCard = ({
     </div>
     <div id="entries">
       <span id="display-entries">
-        <Link to={`entry-detail?${id}`}>
+        <Link to={`entry-detail/${id}`}>
           <h5>
             {title}
           </h5>

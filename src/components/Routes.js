@@ -19,7 +19,7 @@ const Routes = () => (
         <Route exact path="/signup" component={SignupPage} />
         <Route exact path="/signin" component={LoginPage} />
         <Route exact path="/add-entry" component={AddEntryForm} />
-        <Route exact path="/entry-detail" component={EntryDetail} />
+        <Route exact path="/entry-detail/:id" component={EntryDetail} />
       </Switch>
       <Footer />
     </div>
