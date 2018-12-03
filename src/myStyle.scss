@@ -281,6 +281,12 @@ border: 2px solid #f1f1f1;
   width: 80%;
   padding: 10px 30px 20px 30px;
 }
+.dateRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:left;
+  padding: 10px 30px 10px 10%;
+}
 .position {
   display: flex;
   flex-direction: column;

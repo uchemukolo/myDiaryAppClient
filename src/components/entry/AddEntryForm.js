@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+// import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addEntryAction } from '../../redux/actions/entry/addEntryAction';
@@ -14,7 +14,7 @@ class AddEntryForm extends React.Component {
       title: '',
       mood: '',
       entry: '',
-      errors: [],
+      errors: []
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -27,7 +27,7 @@ class AddEntryForm extends React.Component {
 
   onSubmit(event) {
     event.preventDefault();
-    const { addEntryRequest } = this.props;
+    const { addEntryRequest, history } = this.props;
     const { errors } = validateInput(this.state);
     const {
       title, mood, entry
@@ -45,21 +45,17 @@ class AddEntryForm extends React.Component {
         title,
         mood,
         entry
+      }, history);
+      this.setState({
+        errors: {}
       });
-      this.setState(() => ({
-        errors: {},
-      }));
     }
   }
 
   render() {
     const {
-      title, mood, entry, redirect, errors
+      title, mood, entry, errors
     } = this.state;
-
-    if (redirect) {
-      return <Redirect to="/entry-detail" />;
-    }
     return (
       <div className="container-entry">
         <div className="new_entry">
@@ -116,8 +112,11 @@ class AddEntryForm extends React.Component {
     );
   }
 }
+
 AddEntryForm.propTypes = {
-  addEntryRequest: PropTypes.func.isRequired
+  addEntryRequest: PropTypes.func.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  history: PropTypes.object.isRequired
 };
 const mapStateToProps = state => ({
   error: state.auth.error,
@@ -125,7 +124,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  addEntryRequest: newEntry => dispatch(addEntryAction(newEntry))
+  addEntryRequest: (newEntry, history) => dispatch(addEntryAction(newEntry, history))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddEntryForm);

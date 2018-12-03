@@ -43,6 +43,7 @@ module.exports = (env) => {
           },
         ],
       },
+      devtool: 'inline-source-map',
       plugins: [
         new CopyWebpackPlugin([{ from: 'src/static' }]),
         new HtmlWebpackPlugin({
