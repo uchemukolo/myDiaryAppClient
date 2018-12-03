@@ -8,7 +8,8 @@
     "prebuild": "webpack --mode production --config config/webpack.prod.config.js --env.PLATFORM=production --env.VERSION=stag --progress",
     "lint": "node_modules/.bin/eslint src/ --fix",
     "test": "jest --coverage --config=jest.config.json",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "heroku-postbuild": "npm run prebuild"
   },
   "repository": {
     "type": "git",
