@@ -6,7 +6,6 @@ import
   IS_LOADING
 } from '../types';
 
-const token = localStorage.getItem('jwtToken');
 
 export const getEntryDetail = payload => ({
   type: GET_ENTRY_DETAILS,
@@ -25,12 +24,7 @@ export const Loading = () => ({
 export const getEntryDetailAction = entryId => (dispatch) => {
   dispatch(Loading());
   axios.get(
-    `https://mydiary-challenge.herokuapp.com/api/v1/entries/${entryId}`, {
-      headers: {
-        'Content-Type': 'application/json',
-        token: `${token}`,
-      }
-    }
+    `https://mydiary-challenge.herokuapp.com/api/v1/entries/${entryId}`
   ).then((response) => {
     dispatch(getEntryDetail(response.data));
   }).catch((error) => {

@@ -18,6 +18,8 @@ export const addEntryAction = (newEntry, history) => dispatch => axios.post(
     dispatch(addEntrySuccess(response.data));
     const entryId = response.data.newEntry.id;
     history.replace(`/entry-detail/${entryId}`);
+    return response.data;
   }, (error) => {
-    dispatch(addEntryFailure(error.response.data));
+    dispatch(addEntryFailure(error.response.data.message));
+    return error.response.data.message;
   });

@@ -11,6 +11,9 @@ const validateInput = (data) => {
   if (Validator.isEmpty(data.mood)) {
     errors.mood = errorMsg;
   }
+  if (Validator.isNumeric(data.mood)) {
+    errors.mood = 'Pleas use only alphabets';
+  }
   if (Validator.isEmpty(data.entry)) {
     errors.entry = errorMsg;
   } else if (data.entry.length < 6) {
