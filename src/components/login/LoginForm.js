@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import swal from 'sweetalert';
 import validateInput from './validations';
 
 export class LoginForm extends React.Component {
@@ -33,6 +34,7 @@ export class LoginForm extends React.Component {
       this.setState(() => ({
         errors
       }));
+      swal('Oops!', 'Something went wrong!', 'error');
     } else {
       userLoginRequest({
         email,

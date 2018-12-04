@@ -1,4 +1,5 @@
 import axios from 'axios';
+import swal from 'sweetalert';
 import {
   SET_CURRENT_USER,
   SET_CURRENT_USER_ERROR,
@@ -34,5 +35,7 @@ export const userLoginRequest = userDetails => dispatch => axios.post(
     setAuthToken(token);
     dispatch(loginUser(response.data));
   }, (error) => {
+    swal('Oops!', 'Please login with a valid email or password', 'error');
     dispatch(loginUserFailure(error.response));
+    return error.response;
   });

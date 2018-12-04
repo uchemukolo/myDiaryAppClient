@@ -28,6 +28,17 @@ html{overflow-x:hidden}
   background-color: #333;
   padding: 2vh;
   width: 100vw;
+  .icon {
+    width: 22px;
+    height: 22px;
+    padding: 12px;
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+    @media screen and (min-width: 500px) {
+      display: none;
+    }
+  }
 }
 
 .topnav a {
@@ -50,9 +61,9 @@ html{overflow-x:hidden}
   color: white;
 }
 
-.topnav .icon {
-  display: none;
-}
+// .topnav .icon {
+//   display: none;
+// }
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
