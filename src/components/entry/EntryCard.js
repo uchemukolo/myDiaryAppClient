@@ -31,7 +31,11 @@ EntryCard.propTypes = {
   id: PropTypes.number.isRequired,
   createdat: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  entry: PropTypes.shape.isRequired
+  entry: PropTypes.string
+};
+
+EntryCard.defaultProps = {
+  entry: '',
 };
 
 export default EntryCard;

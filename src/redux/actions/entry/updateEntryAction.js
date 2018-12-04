@@ -6,8 +6,6 @@ import
   IS_LOADING
 } from '../types';
 
-const token = localStorage.getItem('jwtToken');
-
 
 export const updateEntry = payload => ({
   type: UPDATE_ENTRY,
@@ -25,12 +23,8 @@ export const Loading = () => ({
 
 export const updateEntryAction = (entryId, updateObject) => (dispatch) => {
   axios.put(
-    `https://mydiary-challenge.herokuapp.com/api/v1/entries/${entryId}`, updateObject, {
-      headers: {
-        'Content-Type': 'application/json',
-        token: `${token}`,
-      }
-    }
+    `https://mydiary-challenge.herokuapp.com/api/v1/entries/${entryId}`,
+    updateObject
   ).then((response) => {
     dispatch(updateEntry(response.data));
     dispatch(Loading());

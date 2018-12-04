@@ -138,9 +138,14 @@ class EntryDetail extends Component {
 EntryDetail.propTypes = {
   getEntryDetailAction: PropTypes.func.isRequired,
   updateEntryAction: PropTypes.func.isRequired,
-  entry: PropTypes.shape.isRequired,
-  match: PropTypes.shape.isRequired,
+  entry: PropTypes.shape({}),
+  match: PropTypes.shape(),
   isLoading: PropTypes.bool.isRequired
+};
+
+EntryDetail.defaultProps = {
+  entry: null,
+  match: null
 };
 
 const mapStateToProps = state => ({

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-export default () => (
+const HeaderContent = ({ isAuthenticated }) => (
   <div>
     <div className="main">
       <h1>It's Personal</h1>
@@ -12,12 +13,22 @@ export default () => (
         <h4>EMPTY YOUR HEAD. PRIVATELY.</h4>
       </div>
     </div>
-    <div className="main-signup-button">
-      <button type="button" className="button">
-        <Link to="/signup">
-          <span>Register! Its Free </span>
-        </Link>
-      </button>
-    </div>
+    {
+      isAuthenticated === false
+      && (
+      <div className="main-signup-button">
+        <button type="button" className="button">
+          <Link to="/signup">
+            <span>Register! Its Free </span>
+          </Link>
+        </button>
+      </div>
+      )
+    }
   </div>
 );
+
+HeaderContent.propTypes = {
+  isAuthenticated: PropTypes.bool.isRequired
+};
+export default HeaderContent;

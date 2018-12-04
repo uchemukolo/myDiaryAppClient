@@ -2,6 +2,7 @@ import React from 'react';
 // import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import swal from 'sweetalert';
 import { addEntryAction } from '../../redux/actions/entry/addEntryAction';
 
 
@@ -45,7 +46,7 @@ class AddEntryForm extends React.Component {
         title,
         mood,
         entry
-      }, history);
+      }, history).then(response => swal('success', response.message, 'success'));
       this.setState({
         errors: {}
       });

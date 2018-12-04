@@ -42,8 +42,12 @@ class GetEntries extends Component {
 }
 
 GetEntries.propTypes = {
-  entry: PropTypes.shape.isRequired,
+  entry: PropTypes.shape({}),
   isLoading: PropTypes.bool.isRequired
+};
+
+GetEntries.defaultProps = {
+  entry: null,
 };
 
 const mapStateToProps = state => ({
