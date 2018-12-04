@@ -1,7 +1,8 @@
 import
 {
   GET_ENTRIES,
-  IS_LOADING
+  IS_LOADING,
+  GET_ENTRIES_ERROR
 } from '../actions/types';
 
 const initialState = {
@@ -21,6 +22,12 @@ function getEntries(state = initialState, action = {}) {
       return {
         ...state,
         isLoading: true
+      };
+    case GET_ENTRIES_ERROR:
+      return {
+        ...state,
+        error: action.error,
+        isLoading: false
       };
     default:
       return state;
