@@ -181,8 +181,9 @@ border: 2px solid #f1f1f1;
   width: 42vw;
 }
 .container-wrapper {
-  width:100vw;
-  display: inline-flex;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 .profile-heading {
   text-align: center;
@@ -194,7 +195,12 @@ border: 2px solid #f1f1f1;
   background-color: #fafafa;
   margin: 50px auto;
   text-align: center;
-  width:30vw;
+  width: 60vw;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.content {
+  width: 80%;
 }
 .container-profilee {
   display: block;

@@ -8,6 +8,7 @@ import LoginPage from './login/LoginPage';
 import AddEntryForm from './entry/AddEntryForm';
 import GetEntries from './entry/GetEntries';
 import EntryDetail from './entry/EntryDetail';
+import GetProfile from './profile/GetProfile';
 
 const Routes = () => (
   <BrowserRouter>
@@ -20,6 +21,7 @@ const Routes = () => (
         <Route exact path="/signin" component={LoginPage} />
         <Route exact path="/add-entry" component={AddEntryForm} />
         <Route exact path="/entry-detail/:id" component={EntryDetail} />
+        <Route exact path="/profile" component={GetProfile} />
       </Switch>
       <Footer />
     </div>

@@ -31,6 +31,7 @@ class NavigationBar extends React.Component {
           auth.isAuthenticated
             ? (
               <div className="large">
+                <Link to="/profile">Home</Link>
                 <Link to="/entries">My Entries</Link>
                 <Link to="/add-entry">Add New Entry</Link>
                 <Link onClick={handleLogout} to="/">Logout</Link>

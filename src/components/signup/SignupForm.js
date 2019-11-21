@@ -62,7 +62,7 @@ export class SignupForm extends React.Component {
     } = this.state;
     const { redirect } = this.props;
     if (redirect) {
-      return <Redirect to="/" />;
+      return <Redirect to="/profile" />;
     }
     return (
       <form id="register-form" onSubmit={this.onSubmit}>
@@ -73,7 +73,7 @@ export class SignupForm extends React.Component {
           <div className="input_field">
             {errors.username
             && (
-            <p id="signup-error" className="red-text">
+            <p id="signup-error" className="CC">
               { errors.username }
             </p>
             )}

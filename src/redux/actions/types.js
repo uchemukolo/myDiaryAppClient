@@ -16,5 +16,9 @@ export const GET_ENTRY_DETAILS_ERROR = 'GET_ENTRY_DETAILS_ERROR';
 export const UPDATE_ENTRY = 'UPDATE_ENTRY';
 export const UPDATE_ENTRY_ERROR = 'UPDATE_ENTRY_ERROR';
 
+// Profile action types
+export const GET_PROFILE = 'GET_PROFILE';
+export const GET_PROFILE_ERROR = 'GET_PROFILE_ERROR';
+
 
 export const IS_LOADING = 'IS_LOADING';

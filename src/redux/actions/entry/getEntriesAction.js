@@ -33,3 +33,13 @@ export const getEntries = () => (dispatch) => {
     return error.response.data;
   });
 };
+
+export const getEntriesCount = () => (dispatch) => {
+  axios.get(
+    'https://mydiary-challenge.herokuapp.com/api/v1/entries'
+  ).then((response) => {
+    dispatch(getAllEntries(response.data.entry.length));
+  }).catch((error) => {
+    dispatch(getAllEntriesFailure(error.response));
+  });
+};

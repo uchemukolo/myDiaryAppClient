@@ -86,6 +86,7 @@ class EntryDetail extends Component {
               onChange={this.onChange}
               contentEditable={editEntry}
             >
+              {' '}
               {entry.mood}
             </span>
           </div>
